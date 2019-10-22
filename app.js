@@ -20,42 +20,36 @@ const port = process.env.PORT || config.get("port");
 app.get('/', function (req, res) {
   res.send('Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
-    '/hello <br>' +
+    '/welcome <br>' +
     '/big <br>' +
     '/json <br>' +
     '/greeting/yourname <br>' +
-    '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
-    '/fancy/?first=Denise&last=Case <br>' +
+    '/fancy/?first=RethimaReddy&last=Polam <br>' +
     '<br> <br>' +
-    'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
+    'Fork the source code from <a href="https://github.com/Rethima-Reddy/node-express-app">https://github.com/Rethima-Reddy/node-express-app</a>'
   )
 })
 
 // or use the new arrow function syntax
 // respond with text
-app.get('/hello', (req, res) => {
-  res.send('Hello World!')
+app.get('/welcome', (req, res) => {
+  res.send('welcome!')
 })
 
 // or respond with html
 app.get('/big', (req, res) => {
-  res.send('<h1>Hello World!</h1>')
+  res.send('<h1>Welcome..!</h1>')
 })
 
 // or respond with JSON
 app.get('/json', (req, res) => {
-  res.send('{"name" : "Nandini"}')
+  res.send('{"firstname" : "RethimaReddy" , "lastname" : "Polam"}')
 })
 
 // :name indicates a parameter at this location in the URI
 app.get('/greeting/:id', (req, res) => {
   res.send(`Hello! The id provided was ${req.params.id}.`)
-})
-
-// combine your skills and get creative
-app.get('/yo/:buddy', (req, res) => {
-  res.send(`<h1>Yo, ${req.params.buddy}!</h1>`)
 })
 
 // provide multiple query parameters (named first and last) with ? and &
