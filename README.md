@@ -4,7 +4,7 @@
 
 ## Links
 
-- [Demo](https://node-express-app-563.herokuapp.com/)
+- [Demo](https://rethu-express-app.herokuapp.com/)
 - [Source](https://github.com/Rethima-Reddy/node-express-app)
 
 ## Requirements
